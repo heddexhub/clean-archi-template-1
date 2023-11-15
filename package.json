@@ -6,6 +6,11 @@
   "scripts": {
     "check": "prettier --write . && eslint --fix"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run check"
+    }
+  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
