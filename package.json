@@ -5,13 +5,7 @@
   "main": "index.js",
   "scripts": {
     "setup": "npm install husky --save-dev && npx husky-init && npm install",
-    "check": "prettier --write . && eslint --fix",
-    "prepare": "husky install"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run check"
-    }
+    "check": "sh -c 'if ls **/*.js 1> /dev/null 2>&1; then prettier --write \"**/*.js\" && eslint --fix \"**/*.js\"; fi'"
   },
   "author": "",
   "license": "ISC",
