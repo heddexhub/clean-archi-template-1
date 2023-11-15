@@ -2,10 +2,13 @@
 
 <------------------------------------------>
 
-## replace [.husky/pre-commit] by :
+## PROJECT SETUP
 
-#!/bin/sh
-. "$(dirname "$0")/\_/husky.sh"
+- RUN : npm run setup
+- Replace [.husky/pre-commit] by :
+
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/\_/husky.sh"
 
     npm run check
 
