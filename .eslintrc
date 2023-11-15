@@ -1,15 +1,25 @@
 {
-  "env": {
-    "node": true
-  },
-  "extends": ["eslint:recommended", "plugin:prettier/recommended","plugin:@typescript-eslint/recommended"],
-  "plugins": ["prettier"],
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "ecmaVersion": 2022,
-    "sourceType": "module"
-  },
-  "rules": {
-    "prettier/prettier": "error"
+    "env": {
+      "node": true
+    },
+    "extends": ["eslint:recommended", "plugin:prettier/recommended"],
+    "plugins": ["prettier"],
+    "parserOptions": {
+      "ecmaVersion": 2022,
+      "sourceType": "module"
+    },
+    "rules": {
+      "prettier/prettier": "error"
+    },
+    "overrides": [
+      {
+        "files": ["*.ts"],
+        "parser": "@typescript-eslint/parser",
+        "extends": ["plugin:@typescript-eslint/recommended"],
+        "parserOptions": {
+          "project": "./tsconfig.json"
+        }
+      }
+    ]
   }
-}
+  
