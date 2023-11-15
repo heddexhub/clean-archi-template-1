@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "check": "prettier --write . && eslint --fix ."
+    "check": "prettier --write . && eslint --fix"
   },
   "author": "",
   "license": "ISC",
