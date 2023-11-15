@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "setup": "npm install husky --save-dev && npx husky-init && npm install",
     "check": "prettier --write . && eslint --fix"
   },
   "husky": {
@@ -17,8 +18,7 @@
     "eslint": "^8.53.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.1",
-    "husky": "^8.0.0",
+    "husky": "^8.0.3",
     "prettier": "^3.1.0"
-  },
-  "dependencies": {}
+  }
 }
