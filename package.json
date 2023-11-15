@@ -4,17 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "prettier --write . && eslint --fix ."
   },
   "lint-staged": {
     "*.js": [
-      "standard"
+      "eslint --fix",
+      "prettier --write"
     ]
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "lint-staged": "^15.1.0",
-    "standard": "^17.1.0"
+    "eslint": "^8.53.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "prettier": "^3.1.0",
+    "husky": "^8.0.0"
   }
 }
